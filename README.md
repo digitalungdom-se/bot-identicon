@@ -8,6 +8,8 @@ A React component that deterministically generates robot icons based on the give
   size={500}
 />
 ```
+## Dependencies
+[Crypto-js](https://www.npmjs.com/package/crypto-js) is needed to hash the identifier.
 
 ## Props
 * `identifier` - the default is an empty string
