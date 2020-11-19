@@ -4,7 +4,7 @@
 A React component that deterministically generates robot icons based on the given input. See example code below:
 ```jsx
 <BotIdenticon 
-  identifier="hej"
+  identifier="john von neumann"
   size={500}
 />
 ```
