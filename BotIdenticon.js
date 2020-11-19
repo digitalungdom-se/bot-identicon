@@ -1,4 +1,5 @@
 import md5 from 'crypto-js/md5';
+import { useEffect } from 'react';
 
 /*
     # BotIdenticon
@@ -17,26 +18,48 @@ import md5 from 'crypto-js/md5';
     # Props
     * identifier - the default is an empty string
     * size       - the size of the icon, default is 200px
+    * color      - manually set the color [h, s, l]
+    * face       - manually set the face [0..7]
+                   they come in this order:
+                    cool,
+                    evil,
+                    kiss,
+                    incognito,
+                    normal,
+                    laughing,
+                    happyEyes,
+                    heartEyes
+
 */
 export default function BotIdenticon(props) {
-    const identifier = props.identifier || "";
-    const size       = props.size || 200;
-    const hash       = md5(identifier).toString();
+    const size = props.size || 200;
+    let identifier;
+    let hash;
 
-    const hue        = parseInt(hash.substring(0,3), 16) % 361;
-    const saturation = parseInt(hash.substring(3, 6), 16) % 51 + 50;
-    const lightness  = parseInt(hash.substring(6,9), 16) % 41 + 20;
-    const face       = parseInt(hash.substring(9,10), 16) % 8;
+    if (!props.color || !props.face) {
+        identifier = props.identifier || "";
+        hash       = md5(identifier).toString();
+    }
+    
 
+    const hue        = props.color ? props.color[0] :
+                       parseInt(hash.substring(0,3), 16) % 361;
+
+    const saturation = props.color ? props.color[1] :
+                       parseInt(hash.substring(3, 6), 16) % 51 + 50;
+
+    const lightness  = props.color ? props.color[2] :
+                       parseInt(hash.substring(6,9), 16) % 41 + 20;
+
+    const face       = props.face ||
+                       parseInt(hash.substring(9,10), 16) % 8;
+    
     const svg = genIcon(face, hue, saturation, lightness);
-
+    
     return <div className="BotIdenticon"
-                style={{
-                    width: size
-                }}
-                dangerouslySetInnerHTML={{__html: svg}}
-    >
-    </div>;
+        style={{width: size}}
+        dangerouslySetInnerHTML={{__html: svg}}
+    ></div>;
 }
 
 function genIcon(face, h, s, l) {
