@@ -17,10 +17,6 @@ import md5 from 'crypto-js/md5';
     # Props
     * identifier - the default is an empty string
     * size       - the size of the icon, default is 200px
-    * getColor   - if you want the parant component 
-                   to receive the color, you should provide a function that saves
-                   the (h, s, l) color value to the state.
-
 */
 export default function BotIdenticon(props) {
     const identifier = props.identifier || "";
@@ -33,10 +29,6 @@ export default function BotIdenticon(props) {
     const face       = parseInt(hash.substring(9,10), 16) % 8;
 
     const svg = genIcon(face, hue, saturation, lightness);
-
-    if (props.getColor) {
-        props.getColor((hue, saturation, lightness));
-    }
 
     return <div className="BotIdenticon"
                 style={{
