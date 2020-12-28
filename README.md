@@ -1,6 +1,6 @@
-# @digitalungdom-se/bot-identicon
+# @digitalungdom/bot-identicon
 
-<img src="https://raw.githubusercontent.com/adelhult/BotIdenticon/main/preview.png" width="200"/>
+<img src="preview.png" width="200"/>
 
 # Bot Identicon
 
@@ -8,12 +8,12 @@ A React component that deterministically generates robot icons based on the give
 
 > Made with create-react-library
 
-[![NPM](https://img.shields.io/npm/v/@digitalungdom-se/bot-identicon.svg)](https://www.npmjs.com/package/@digitalungdom-se/bot-identicon) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/@digitalungdom/bot-identicon.svg)](https://www.npmjs.com/package/@digitalungdom-se/bot-identicon) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Install
 
 ```bash
-npm install --save @digitalungdom-se/bot-identicon
+npm install --save @digitalungdom/bot-identicon
 ```
 
 ## Usage
@@ -21,7 +21,7 @@ npm install --save @digitalungdom-se/bot-identicon
 ```tsx
 import React, { Component } from 'react'
 
-import BotIdenticon from '@digitalungdom-se/bot-identicon'
+import BotIdenticon from '@digitalungdom/bot-identicon'
 
 class Example extends Component {
   render() {
@@ -46,7 +46,7 @@ class Example extends Component {
 
 ## Credit
 
-The original robot design is by @charlesmaddock and @digitalungdom-se. The code for this repo was originally developed by @adelhult.
+The original robot design is by @charlesmaddock and @digitalungdom. The code for this repo was originally developed by @adelhult.
 
 ## License
 

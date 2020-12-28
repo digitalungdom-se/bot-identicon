@@ -1,8 +1,6 @@
-import '@digitalungdom-se/bot-identicon/dist/index.css'
+import '@digitalungdom/bot-identicon/dist/index.css'
 
-import BotIdenticon, {
-  HashedBotIdenticon
-} from '@digitalungdom-se/bot-identicon'
+import BotIdenticon, { HashedBotIdenticon } from '@digitalungdom/bot-identicon'
 
 import React from 'react'
 

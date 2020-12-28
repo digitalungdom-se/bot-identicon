@@ -1,6 +1,6 @@
 {
-  "short_name": "@digitalungdom-se/bot-identicon",
-  "name": "@digitalungdom-se/bot-identicon",
+  "short_name": "@digitalungdom/bot-identicon",
+  "name": "@digitalungdom/bot-identicon",
   "icons": [
     {
       "src": "favicon.ico",

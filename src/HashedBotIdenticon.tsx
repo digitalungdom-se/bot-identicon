@@ -1,6 +1,6 @@
 import { Face, faces } from './BotFace'
 
-import BotIdenticon from '.'
+import BotIdenticon from './BotIdenticon'
 import React from 'react'
 import md5 from 'crypto-js/md5'
 
