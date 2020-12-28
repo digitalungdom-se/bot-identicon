@@ -1,11 +1,12 @@
 {
   "name": "@digitalungdom/bot-identicon",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Bot Identicon for Digital Ungdom",
   "author": "digitalungdom-se",
   "license": "MIT",
   "repository": "digitalungdom-se/bot-identicon",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "module": "dist/index.modern.js",
   "source": "src/index.tsx",
   "engines": {
