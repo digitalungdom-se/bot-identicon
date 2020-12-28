@@ -4,18 +4,20 @@ import BotFace, { BotFaceProps } from './BotFace'
 
 import BotShape from './BotShape'
 
-interface BotIdenticonProps extends BotFaceProps {
-  identifier?: string
-  color?: [number, number, number]
-  size?: number
+export interface BaseBotIdenticonProps {
+  size?: number | 'inherit'
   background?: boolean
+}
+
+interface BotIdenticonProps extends BotFaceProps, BaseBotIdenticonProps {
+  color?: [number, number, number]
 }
 
 export const BotIdenticon = ({
   background,
   color,
   face,
-  size = 200
+  size
 }: BotIdenticonProps) => {
   return (
     <svg
@@ -25,8 +27,7 @@ export const BotIdenticon = ({
       y='0px'
       viewBox='0 0 300 300'
       overflow='visible'
-      width={size}
-      height={size}
+      width={size === 'inherit' ? size : size === undefined ? 200 : size}
     >
       <BotShape
         h={color ? color[0] : undefined}

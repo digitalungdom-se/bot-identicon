@@ -13,6 +13,8 @@ const App = () => {
       <HashedBotIdenticon identifier='Douglas Bengtsson' background />
       <HashedBotIdenticon identifier='Simon Sondén' background />
       <HashedBotIdenticon identifier='Kelvin Szolnoky' background />
+      <HashedBotIdenticon identifier='Charles Maddock' background />
+      <HashedBotIdenticon identifier='Karl Sellergren' background />
     </div>
   )
 }

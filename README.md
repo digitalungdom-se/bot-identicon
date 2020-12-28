@@ -8,7 +8,7 @@ A React component that deterministically generates robot icons based on the give
 
 > Made with create-react-library
 
-[![NPM](https://img.shields.io/npm/v/@digitalungdom/bot-identicon.svg)](https://www.npmjs.com/package/@digitalungdom-se/bot-identicon) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/@digitalungdom/bot-identicon.svg)](https://www.npmjs.com/package/@digitalungdom/bot-identicon) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Install
 
@@ -32,13 +32,24 @@ class Example extends Component {
 
 ## Props
 
-- `identifier` - the default is an empty string
-- `size` - the size of the icon, default is 200px
-- `color` - manually set the color `[h, s, l]`
-- `face` - manually set the face int in interval `[0..7]`
-  they come in this order:
-  cool, evil, kiss, incognito, normal,
-  laughing, happyEyes, heartEyes.
+`BaseBotIdenticonProps`: props for all identicons
+| Name | Type | Default | Description |
+|------------|----------------------|---------|--------------------|
+| size | `'inherit' | number` | `200` | size of the icon |
+| background | `boolean` | `false` | display background |
+
+`BotIdenticonProps`
+Inherits BaseBotIdenticonProps
+| Name | Type | Default | Description |
+|-------|-----------------------------------------------------------------------------------------------------|----------|-----------------------|
+| color | `[h: number, s: number, l: number]` | `[216, 81, 51]` | color in HSL-values |
+| face | `'cool' \| 'evil' \| 'kiss' \| 'incognito' \| 'normal'\| 'laughing' \| 'happyEyes' \| 'heartEyes'` | `normal` | face of the identicon |
+
+`<HashedBotIdenticon>`
+
+- `identifier` - string that will deterministically create colors and a face with md5
+
+`Face`
 
 ## Dependencies
 
@@ -46,7 +57,7 @@ class Example extends Component {
 
 ## Credit
 
-The original robot design is by @charlesmaddock and @digitalungdom. The code for this repo was originally developed by @adelhult.
+The original robot design is by @charlesmaddock and @digitalungdom. The code for this repo was originally developed by @adelhult. The transitition to TypeScript and publishing as a reusable component was made by @nautman.
 
 ## License
 

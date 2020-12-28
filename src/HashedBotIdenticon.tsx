@@ -1,17 +1,17 @@
+import BotIdenticon, { BaseBotIdenticonProps } from './BotIdenticon'
 import { Face, faces } from './BotFace'
 
-import BotIdenticon from './BotIdenticon'
 import React from 'react'
 import md5 from 'crypto-js/md5'
 
-export interface HashedBotIdenticonProps {
+export interface HashedBotIdenticonProps extends BaseBotIdenticonProps {
   identifier?: string
-  background?: boolean
 }
 
 export function HashedBotIdenticon({
+  background = false,
   identifier,
-  background = false
+  size
 }: HashedBotIdenticonProps) {
   const hash = md5(identifier || '').toString()
   const hue = parseInt(hash.substring(0, 3), 16) % 361
@@ -27,6 +27,7 @@ export function HashedBotIdenticon({
       color={[hue, saturation, lightness]}
       face={face}
       background={background}
+      size={size}
     />
   )
 }
