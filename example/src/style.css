@@ -1,0 +1,10 @@
+div.outer {
+  display: table;
+}
+div.middle {
+  display: table-row;
+}
+div.inner {
+  display: table-cell;
+  min-width: 20%;
+}

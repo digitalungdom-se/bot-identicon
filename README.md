@@ -32,21 +32,41 @@ class Example extends Component {
 
 ## Props
 
-`BaseBotIdenticonProps`: props for all identicons
-| Name | Type | Default | Description |
-|------------|----------------------|---------|--------------------|
-| size | `'inherit' \| number` | `200` | size of the icon |
-| background | `boolean` | `false` | display background |
+### `BaseBotIdenticonProps`
 
-`BotIdenticonProps`: inherits BaseBotIdenticonProps
-| Name | Type | Default | Description |
-|-------|-----------------------------------------------------------------------------------------------------|----------|-----------------------|
-| color | `[h: number, s: number, l: number]` | `[216, 81, 51]` | color in HSL-values |
-| face | `'cool' \| 'evil' \| 'kiss' \| 'incognito' \| 'normal'\| 'laughing' \| 'happyEyes' \| 'heartEyes'` | `normal` | face of the identicon |
+| Name         | Type                  | Default | Description        |
+| ------------ | --------------------- | ------- | ------------------ |
+| `size`       | `'inherit' \| number` | `200`   | size of the icon   |
+| `background` | `boolean`             | `false` | display background |
 
-`<HashedBotIdenticon>`: inherits props for `BaseBotIdenticonProps`
+### `BotIdenticonProps`
+
+Inherits BaseBotIdenticonProps.
+
+| Name    | Type                                | Default         | Description         |
+| ------- | ----------------------------------- | --------------- | ------------------- | --------------------- |
+| `color` | `[h: number, s: number, l: number]` | `[216, 81, 51]` | color in HSL-values |
+| `face`  | `Face`                              |                 | `normal`            | face of the identicon |
+
+### `<HashedBotIdenticon>`
+
+Inherits props for `BotIdenticonProps`. To override the hashed values, one can provide a `face` and/or `color` property.
 
 - `identifier` - string that will deterministically create colors and a face with md5
+
+### `Face`
+
+One of the following values
+
+- `'cool'`
+- `'evil'`
+- `'kiss'`
+- `'incognito'`
+- `'normal'`
+- `'laughing'`
+- `'happyEyes'`
+- `'heartEyes'`
+- `'celebrate'`
 
 ## Dependencies
 

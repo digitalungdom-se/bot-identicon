@@ -15,7 +15,7 @@ const BotShape = ({
 }: BotShapeProps) => (
   <g id='robotShape'>
     {background && (
-      <rect fill={`hsl(${h}, ${s}%, ${l}%)`} width='300' height='300' />
+      <rect fill={`hsl(${h}, ${s}%, ${l}%)`} width='100%' height='100%' />
     )}
     <path
       fill='#CECECE'
