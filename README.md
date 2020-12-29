@@ -21,7 +21,7 @@ npm install --save @digitalungdom/bot-identicon
 ```tsx
 import React, { Component } from 'react'
 
-import BotIdenticon from '@digitalungdom/bot-identicon'
+import HashedBotIdenticon from '@digitalungdom/bot-identicon'
 
 class Example extends Component {
   render() {
