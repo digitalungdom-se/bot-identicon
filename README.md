@@ -44,9 +44,9 @@ class Example extends Component {
 Inherits BaseBotIdenticonProps.
 
 | Name    | Type                                | Default         | Description         |
-| ------- | ----------------------------------- | --------------- | ------------------- | --------------------- |
+| ------- | ----------------------------------- | --------------- | ------------------- |
 | `color` | `[h: number, s: number, l: number]` | `[216, 81, 51]` | color in HSL-values |
-| `face`  | `Face`                              |                 | `normal`            | face of the identicon |
+| `face`  | `Face`                              | `normal`        | face of the identicon |
 
 ### `<HashedBotIdenticon>`
 
