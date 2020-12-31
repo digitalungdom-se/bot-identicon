@@ -1,10 +1,11 @@
 div.outer {
   display: table;
+  width: 100%;
 }
 div.middle {
   display: table-row;
+  width: 100%;
 }
 div.inner {
   display: table-cell;
-  min-width: 20%;
 }

@@ -29,8 +29,9 @@ export const BotIdenticon = ({
       y='0px'
       viewBox='0 0 300 300'
       overflow='visible'
-      width={size === 'inherit' ? undefined : size === undefined ? 200 : size}
+      width={size === 'inherit' ? '100%' : size === undefined ? 200 : size}
       style={style}
+      preserveAspectRatio='none'
     >
       <BotShape
         h={color ? color[0] : undefined}
